@@ -1,0 +1,11 @@
+FROM ruby:3-slim-bookworm
+
+RUN apt update
+
+RUN apt-get install -y --no-install-recommends \
+    build-essential \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY entry.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/entry.sh
