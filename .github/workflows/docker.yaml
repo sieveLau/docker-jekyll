@@ -67,8 +67,7 @@ jobs:
           push: true
           tags: |
             sievelau/jekyll-cli:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          pull: false
   build-jekyll-server:
     runs-on: ubuntu-latest
     needs: build-base
@@ -103,5 +102,4 @@ jobs:
           push: true
           tags: |
             sievelau/jekyll-server:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          pull: false
