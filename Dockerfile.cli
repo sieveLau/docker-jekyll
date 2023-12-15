@@ -9,3 +9,9 @@ RUN apt-get install -y --no-install-recommends \
 
 COPY entry.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entry.sh
+
+WORKDIR /site
+
+ENTRYPOINT [ "entry.sh" ]
+
+CMD ["bundle", "exec", "jekyll","--help"]
