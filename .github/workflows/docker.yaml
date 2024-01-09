@@ -20,6 +20,8 @@ jobs:
             tag: sievelau/jekyll:cli
           - dockerfile: ./Dockerfile.server
             tag: sievelau/jekyll:server
+          - dockerfile: ./Dockerfile.fat
+            tag: sievelau/jekyll:fat
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
